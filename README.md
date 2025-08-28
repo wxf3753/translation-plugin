@@ -188,8 +188,8 @@
 ## 📞 联系方式
 
 - 项目主页: [GitHub Repository]
-- 问题反馈: [Issues]
-- 功能建议: [Discussions]
+- 问题反馈: [微信号：YuShine_wei]
+- 功能建议: [微信号：YuShine_wei]
 
 ---
 
