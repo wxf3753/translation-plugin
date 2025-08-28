@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>翻译助手</title>
+    <link rel="stylesheet" href="sidepanel.css">
+    <style>
+        /* 独立小窗口优化样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            width: 400px;
+            min-height: 600px;
+            overflow-x: hidden;
+            background: #f8f9fa;
+        }
+        .sidebar-container {
+            width: 100%;
+            min-height: 600px;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        /* 强制窗口样式 */
+        html {
+            width: 400px;
+            max-width: 400px;
+        }
+        
+        /* 隐藏滚动条但保持功能 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar-container">
+        <div class="header">
+            <h1>🌐 翻译助手</h1>
+        </div>
+        
+        <div class="feature-section">
+            <div class="feature-title">
+                <div class="feature-icon">🌐</div>
+                智能翻译
+            </div>
+            <textarea id="translateInput" class="input-area" placeholder="选中页面内容后，点击翻译按钮即可获得翻译结果..."></textarea>
+            <button id="translateBtn" class="action-button">🔍 翻译内容</button>
+            <div id="translateResult" class="result-area">
+                翻译结果将显示在这里...
+            </div>
+        </div>
+
+        <div class="feature-section">
+            <div class="feature-title">
+                <div class="feature-icon">📝</div>
+                内容总结
+            </div>
+            <textarea id="summarizeInput" class="input-area" placeholder="输入需要总结的内容，或直接点击总结按钮总结当前页面..."></textarea>
+            <button id="summarizeBtn" class="action-button">📊 生成总结</button>
+            <div id="summarizeResult" class="result-area">
+                总结结果将显示在这里...
+            </div>
+        </div>
+
+        <div class="settings-section">
+            <div class="feature-title">
+                <div class="feature-icon">⚙️</div>
+                设置
+            </div>
+            <div class="setting-item">
+                <label for="kimiApiKey">Kimi API Key:</label>
+                <input type="password" id="kimiApiKey" class="setting-input" placeholder="请输入您的Kimi API Key">
+                <button id="saveApiKey" class="setting-button">保存</button>
+            </div>
+            <div class="setting-item">
+                <label for="targetLanguage">目标语言:</label>
+                <select id="targetLanguage" class="setting-select">
+                    <option value="zh">中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <div id="statusText">就绪</div>
+            <div id="loadingSpinner" class="loading-spinner" style="display: none;"></div>
+            <button id="testBtn" class="test-btn">测试连接</button>
+            <button id="debugBtn" class="test-btn">调试信息</button>
+        </div>
+    </div>
+
+    <script src="sidepanel.js"></script>
+</body>
+</html>

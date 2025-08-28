@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "智能翻译与总结助手",
+  "version": "1.0.0",
+  "description": "基于Kimi API的智能翻译和内容总结Chrome插件",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "windows"
+  ],
+  "host_permissions": [
+    "https://api.moonshot.cn/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "action": {
+    "default_title": "智能翻译与总结助手"
+  }
+}

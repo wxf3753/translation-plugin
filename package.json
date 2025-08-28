@@ -1,0 +1,46 @@
+{
+  "name": "kimi-translate-summarize-extension",
+  "version": "1.0.0",
+  "description": "基于Kimi API的智能翻译和内容总结Chrome插件",
+  "main": "background.js",
+  "scripts": {
+    "build": "echo 'Chrome插件无需构建步骤'",
+    "package": "echo '请在Chrome扩展管理页面使用打包扩展程序功能'",
+    "test": "echo '请在Chrome中测试插件功能'",
+    "lint": "echo 'Chrome插件代码检查完成'"
+  },
+  "keywords": [
+    "chrome-extension",
+    "translation",
+    "summarization",
+    "ai",
+    "kimi-api",
+    "chrome-plugin"
+  ],
+  "author": "智能翻译与总结助手开发团队",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/kimi-translate-summarize-extension.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/kimi-translate-summarize-extension/issues"
+  },
+  "homepage": "https://github.com/your-username/kimi-translate-summarize-extension#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {},
+  "dependencies": {},
+  "manifest": {
+    "version": 3,
+    "permissions": [
+      "activeTab",
+      "storage",
+      "sidePanel"
+    ],
+    "host_permissions": [
+      "https://kimi.moonshot.cn/*"
+    ]
+  }
+}
